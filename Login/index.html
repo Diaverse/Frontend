@@ -17,10 +17,10 @@
 				<label type="text">Welcome to Diaverse.</label>
 			</div>
 			<form id="login" class="input-group">
-				<input type="text" class="input-field" placeholder="User ID" required>
-				<input type="password" class="input-field" placeholder="Password" required>
+				<input type="text" class="input-field" placeholder="User ID" id="loginUsr" name="loginUsr" required>
+				<input type="password" class="input-field" placeholder="Password" id="loginPass" name="loginPass" required>
 				<input type="checkbox" class="check-box"><span>Remember Password</span>
-				<button type="submit" class="submit-btn">Log in</button>
+				<button type="submit" class="submit-btn" onsubmit="checkLogin()">Log in</button>
 			</form>
 			<form id="registration" class="input-group">
 				<input type="text" class="input-field" placeholder="User ID" required>
@@ -53,6 +53,25 @@
 
 	</script>
 
+<script type="text/javascript">
+	function checkLogin()
+	{
+	fetch("http://ec2-54-82-98-123.compute-1.amazonaws.com/LoginUser" , {
+    "method": "GET",
+    "body": JSON.stringify({
+    })
+})
+.then(response => response.json())
+.then(response => {
+    console.log(response);
+});
+
+	};
+	
+	
+	
+	
+</script>
 
 </body>
 </html>

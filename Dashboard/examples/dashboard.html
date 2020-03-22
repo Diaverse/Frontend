@@ -177,6 +177,30 @@
     </div>
 </body>
 
+<script>
+// AJAX
+var ajax = new XMLHttpRequest();
+var method = "GET";
+var url = "data.php";
+var asynchronous = true;
+
+ajax.open(method, url, asynchronous);
+
+//send AJAX
+ajax.send();
+
+//receive
+ajax.onreadystatechange = function()
+{
+  if (this.readyState == 4 && this.status == 200)
+  {
+      alert(this.responseText);
+  }
+}
+
+</script>
+
+
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
