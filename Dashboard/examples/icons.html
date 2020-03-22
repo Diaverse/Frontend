@@ -46,10 +46,16 @@
                             <p>Script Editor</p>
                         </a>
                     </li>
-		    <li class="nav-item active">
+                    <li>
+                        <a class="nav-link" href="./scriptDB.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Test Suite</p>
+                        </a>
+                    </li>
+		            <li class="nav-item active">
                         <a class="nav-link" href="./icons.html">
                             <i class="nc-icon nc-atom"></i>
-                            <p>Backend Portal</p>
+                            <p>Hardware Portal</p>
                         </a>
                     </li>
                 </ul>
@@ -59,7 +65,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Backend Portal </a>
+                    <a class="navbar-brand" href="#pablo"> Hardware Portal </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -85,13 +91,28 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card ">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Sending you to our backend service...</h4>
-                                    <p class="card-category"></p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title"> Hardware Access </h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6 pr-1">
+                                                    <div class="form-group">
+                                                            <label>Please enter your hardware's IP address:</label>
+                                                            <input type="text" class="form-control" placeholder="IP Address" required>
+                                                    </div>
+                                                    <div class="col-md-2 pr-1">
+                                                         <button type="submit" class="btn btn-info btn-fill pull-right">Go</button>
+                                                         <div class="clearfix"></div>
+                                                    </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
