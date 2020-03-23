@@ -20,14 +20,14 @@
 				<input type="text" class="input-field" placeholder="User ID" id="loginUsr" name="loginUsr" required>
 				<input type="password" class="input-field" placeholder="Password" id="loginPass" name="loginPass" required>
 				<input type="checkbox" class="check-box"><span>Remember Password</span>
-				<button type="submit" class="submit-btn" onsubmit="checkLogin()">Log in</button>
+				<button type="submit" class="submit-btn" onclick="checkLogin()">Log in</button>
 			</form>
 			<form id="registration" class="input-group">
-				<input type="text" class="input-field" placeholder="User ID" required>
-				<input type="email" class="input-field" placeholder="Email" required>
-				<input type="password" class="input-field" placeholder="Password" required>
+				<input type="text" class="input-field" placeholder="User ID" id="regUsr" name="regUsr" required>
+				<input type="email" class="input-field" placeholder="Email" id="regEmail" name="regEmail" required>
+				<input type="password" class="input-field" placeholder="Password" id="regPass" name="regPass" required>
 				<input type="checkbox" class="check-box" required><span>I agree to the Terms and Conditions</span>
-				<button type="submit" class="submit-btn">Register</button>
+				<button type="submit" class="submit-btn" onsubmit="checkReg()">Register</button>
 			</form>
 
 		</div>
@@ -56,21 +56,56 @@
 <script type="text/javascript">
 	function checkLogin()
 	{
-	fetch("http://ec2-54-82-98-123.compute-1.amazonaws.com/LoginUser" , {
-    "method": "GET",
-    "body": JSON.stringify({
-    })
-})
-.then(response => response.json())
-.then(response => {
-    console.log(response);
-});
+		//entering no credentials = acepted..
+		var x = loginUsr.value
+		var y = loginPass.value
+		var full = "http://ec2-54-82-98-123.compute-1.amazonaws.com/LoginUser?username="+x+"&pass="+y
+		// Practical example
+		fetch(full)
+		.then(function(response){
+			if (!response.ok){
+				alert("Invalid login credentials. Please try again.")
+			}
+			else
+			{
+				window.location.href("file:///C:/Users/medeirosp/Documents/Software_Engineering/Github/Dashboard/examples/dashboard.html");
+			}
+		})
+	    	sleep(19)
+	}
+	
+	
+</script>
 
-	};
+<script type="text/javascript">
+	function checkReg()
+	{
+		var x = reigstration.regUsr
+		var y = registration.regPass
+		var z = registration.regEmail
+		var full = "http://ec2-54-82-98-123.compute-1.amazonaws.com/RegisterUser?username="+x+"&pass="+y+"&email="+z
+		// Practical example
+		fetch(full)
+		.then(function(response){
+			if (!response.ok){
+				alert("An error has occurred. Please try again later.")
+			}
+		})
+
+ 		 .then(response => response.json())
+ 		 .then(data => console.log(JSON.stringify(data)))
+	    	sleep(19)
+
+			
+	}
 	
-	
-	
-	
+</script>
+
+<script type="">
+function gotoDashboard()
+{
+
+}
 </script>
 
 </body>
