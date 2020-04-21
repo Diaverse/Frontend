@@ -1,5 +1,4 @@
 # Frontend
-Repo for the frontend UI. 
-
-/////IMPORTANT/////                                                                                                                       
-This repo is out of date. Please refer to the "Backend" repo for the most up-to-date files.
+/////IMPORTANT/////  
+This was the original repo for files concerning the frontend UI.
+As of now, this repo is out of date. Please refer to the repository named "Backend" for the most up-to-date files.
